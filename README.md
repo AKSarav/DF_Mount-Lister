@@ -50,7 +50,7 @@ devjboss02
 ###### Step5:
 
 Start the script getfs.sh with your SSH user id as startup argument (commandline arguement)
-###### The script is designed with an assumption that there will be single username&password to all the provided servers. so you can pass only one username as a startup arguement
+> The script is designed with an assumption that there will be single username&password to all the provided servers. so you can pass only one username as a startup arguement
 
 
 ``` ./getfs.sh <sshuserid> ```
@@ -79,14 +79,16 @@ this will execute a command to the remote host and save the output in “.OUT”
 
 Generate a console report by executing *./DF_unixreport.sh*
 
+> Formatting could have been bit broken when here, It would not be the case in the terminal
+
 ```
-aksarav@testweblogic03> ./DF_unixreport.sh
+sthangar@testweblogic03> ./DF_unixreport.sh
 
 NFS REPORT:
 -----------------------------------------------------------------------------------------------------------------------------
 SERVER_NAME          FILESYSTEM                                                                       TYPE       MOUNTED ON
 -----------------------------------------------------------------------------------------------------------------------------
-testweblogic02       nfsserver.mwinventory.in:/images                                        		       nfs          /images
+testweblogic02       nfsserver.mwinventory.in:/images                                        		  nfs          /images
 testweblogic02       nfsserver.mwinventory.in:/app-data                                               nfs          /appdata
 testweblogic01       nfsserver.mwinventory.in:/sql-reports                                            nfs          /sqlrep
 testweblogic01       nfsserver.mwinventory.in:/app-data                                               nfs          /appdata
@@ -96,14 +98,15 @@ XFS REPORT:
 -----------------------------------------------------------------------------------------------------------------------------
 SERVER_NAME          FILESYSTEM                                                                       TYPE       MOUNTED ON
 -----------------------------------------------------------------------------------------------------------------------------
-testweblogic02       /dev/mapper/rootvg-root                                       		  			            xfs          /
+testweblogic02       /dev/mapper/rootvg-root                                       		  			  xfs          /
 testweblogic02       /dev/mapper/rootvg-opt                                                           xfs          /opt
 testweblogic01       /dev/mapper/rootvg-root                                                          xfs          /
 testweblogic01       /dev/mapper/rootvg-opt                                                           xfs          /opt
-testjboss01          /dev/mapper/rootvg-root                                       		  			            xfs          /
+testjboss01          /dev/mapper/rootvg-root                                       		  			  xfs          /
 testjboss01          /dev/mapper/rootvg-opt                                                           xfs          /opt
-testjboss02          /dev/mapper/rootvg-root                                       		  			            xfs          /
+testjboss02          /dev/mapper/rootvg-root                                       		  			  xfs          /
 testjboss02          /dev/mapper/rootvg-opt                                                           xfs          /opt
+
 ```
 
 ## Step 6a:
