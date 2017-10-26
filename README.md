@@ -1,5 +1,6 @@
 # DF_Mount-Lister
- A Shell script ( actually set of shell scripts) designed to remote login[SSH]  to list of servers and pull the DF related information and print it with GOOD FORMATTING and Convert as CSV REPORT - with out SSH KEYGEN
+ A Shell script ( actually set of shell scripts) designed to remote login[SSH] to the list of servers by reading the ssh password from the property file and pull the DF related information and print it as Console Report with GOOD FORMATTING (or) Generate a CSV REPORT 
+
  
 
 # How its designed ?
@@ -10,7 +11,10 @@ There are  3 shell scripts and 2 text files which help you to obtain the result 
 
 **serverlist** - A text file contains the server name in a stack [ line after line ]
 
-**password.txt** - A file to be used to enter your password secretly while executing the script [ this file will be removed after every execution for security purpose ]
+**password.txt** - A file to be used to enter your password secretly while executing the script 
+###### Notes: 
+###### this *password.txt* file will be removed after every execution for security purpose
+###### The script is designed with an assumption that there will be single username&password to all the provided servers. so you can pass only one password in the file
 
 **DF_unixreport.sh** – A script prints the well formatted  report to your console
 
@@ -45,14 +49,16 @@ devjboss02
 
 ###### Step5:
 
-Start the script getfs.sh with your SSH user id as startup argument
+Start the script getfs.sh with your SSH user id as startup argument (commandline arguement)
+###### The script is designed with an assumption that there will be single username&password to all the provided servers. so you can pass only one username as a startup arguement
 
-“./getfs.sh <sshuserid>”
+
+``` ./getfs.sh <sshuserid> ```
 
 # Trial run 
 
 ```
-aksarav@testweblogic03> ./getfs.sh sthangar
+aksarav@testweblogic03> ./getfs.sh aksarav
 
 Server List file present
 Password file is present
