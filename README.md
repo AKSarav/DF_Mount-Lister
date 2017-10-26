@@ -6,11 +6,16 @@
 
 There are  3 shell scripts and 2 text files which help you to obtain the result what you want. Let me explain what each one of them doing.
 
-getfs.sh -  A main script to be executed to pull the data from various servers
-serverlist - A text file contains the server name in a stack [ line after line ]
-password.txt - A file to be used to enter your password secretly while executing the script [ this file will be removed after every execution for security purpose ]
-DF_unixreport.sh – A script prints the well formatted  report to your console
-DF_csvreport.sh – A script generates the CSV report and save it with date and timestamp i.e DFREPORT_155601-25Oct17.csv
+**getfs.sh** -  A main script to be executed to pull the data from various servers
+
+**serverlist** - A text file contains the server name in a stack [ line after line ]
+
+**password.txt** - A file to be used to enter your password secretly while executing the script [ this file will be removed after every execution for security purpose ]
+
+**DF_unixreport.sh** – A script prints the well formatted  report to your console
+
+**DF_csvreport.sh** – A script generates the CSV report and save it with date and timestamp i.e DFREPORT_155601-25Oct17.csv
+
 
 # How to Use  It ?
 
