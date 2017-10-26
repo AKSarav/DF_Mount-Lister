@@ -1,7 +1,6 @@
 # DF_Mount-Lister
  A Shell script ( actually set of shell scripts) designed to remote login[SSH] to the list of servers by reading the ssh password from the property file and pull the DF related information and print it as Console Report with GOOD FORMATTING (or) Generate a CSV REPORT 
 
- 
 
 # How its designed ?
 
@@ -12,9 +11,11 @@ There are  3 shell scripts and 2 text files which help you to obtain the result 
 **serverlist** - A text file contains the server name in a stack [ line after line ]
 
 **password.txt** - A file to be used to enter your password secretly while executing the script 
-###### Notes: 
-###### this *password.txt* file will be removed after every execution for security purpose
-###### The script is designed with an assumption that there will be single username&password to all the provided servers. so you can pass only one password in the file
+> Notes: 
+
+  > this *password.txt* file will be removed after every execution for security purpose
+
+  > The script is designed with an assumption that there will be single username&password to all the provided servers. so you can pass only one password in the file
 
 **DF_unixreport.sh** – A script prints the well formatted  report to your console
 
@@ -79,7 +80,7 @@ this will execute a command to the remote host and save the output in “.OUT”
 
 Generate a console report by executing *./DF_unixreport.sh*
 
-> Formatting could have been bit broken when here, It would not be the case in the terminal
+> Formatting could have been bit broken here, It would not be the case in the terminal
 
 ```
 sthangar@testweblogic03> ./DF_unixreport.sh
